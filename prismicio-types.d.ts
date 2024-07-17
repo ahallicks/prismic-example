@@ -121,45 +121,45 @@ export interface CtaBlockSliceDefaultPrimaryCtaItem {
 }
 
 /**
- * Item in *CtaBlock → Testimonial With Pretitle → Primary → CTA*
+ * Item in *CtaBlock → CTA Block With Pretitle → Primary → CTA*
  */
-export interface CtaBlockSliceTestimonialWithPretitlePrimaryCtaItem {
+export interface CtaBlockSliceCtaBlockWithPretitlePrimaryCtaItem {
   /**
-   * CTA Title field in *CtaBlock → Testimonial With Pretitle → Primary → CTA*
+   * CTA Title field in *CtaBlock → CTA Block With Pretitle → Primary → CTA*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cta_block.testimonialWithPretitle.primary.cta[].cta_title
+   * - **API ID Path**: cta_block.ctaBlockWithPretitle.primary.cta[].cta_title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_title: prismic.KeyTextField;
 
   /**
-   * CTA Text field in *CtaBlock → Testimonial With Pretitle → Primary → CTA*
+   * CTA Text field in *CtaBlock → CTA Block With Pretitle → Primary → CTA*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cta_block.testimonialWithPretitle.primary.cta[].cta_text
+   * - **API ID Path**: cta_block.ctaBlockWithPretitle.primary.cta[].cta_text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   cta_text: prismic.RichTextField;
 
   /**
-   * CTA Link field in *CtaBlock → Testimonial With Pretitle → Primary → CTA*
+   * CTA Link field in *CtaBlock → CTA Block With Pretitle → Primary → CTA*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: cta_block.testimonialWithPretitle.primary.cta[].cta_link
+   * - **API ID Path**: cta_block.ctaBlockWithPretitle.primary.cta[].cta_link
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   cta_link: prismic.LinkField;
 
   /**
-   * CTA Link Text field in *CtaBlock → Testimonial With Pretitle → Primary → CTA*
+   * CTA Link Text field in *CtaBlock → CTA Block With Pretitle → Primary → CTA*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cta_block.testimonialWithPretitle.primary.cta[].cta_link_text
+   * - **API ID Path**: cta_block.ctaBlockWithPretitle.primary.cta[].cta_link_text
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   cta_link_text: prismic.KeyTextField;
@@ -182,12 +182,12 @@ export interface CtaBlockSliceDefaultPrimary {
   /**
    * Text field in *CtaBlock → Default → Primary*
    *
-   * - **Field Type**: Text
+   * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
    * - **API ID Path**: cta_block.default.primary.text
-   * - **Documentation**: https://prismic.io/docs/field#key-text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  text: prismic.KeyTextField;
+  text: prismic.RichTextField;
 
   /**
    * CTA field in *CtaBlock → Default → Primary*
@@ -214,62 +214,62 @@ export type CtaBlockSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
- * Primary content in *CtaBlock → Testimonial With Pretitle → Primary*
+ * Primary content in *CtaBlock → CTA Block With Pretitle → Primary*
  */
-export interface CtaBlockSliceTestimonialWithPretitlePrimary {
+export interface CtaBlockSliceCtaBlockWithPretitlePrimary {
   /**
-   * Pretitle field in *CtaBlock → Testimonial With Pretitle → Primary*
+   * Pretitle field in *CtaBlock → CTA Block With Pretitle → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cta_block.testimonialWithPretitle.primary.pretitle
+   * - **API ID Path**: cta_block.ctaBlockWithPretitle.primary.pretitle
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   pretitle: prismic.KeyTextField;
 
   /**
-   * Title field in *CtaBlock → Testimonial With Pretitle → Primary*
+   * Title field in *CtaBlock → CTA Block With Pretitle → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cta_block.testimonialWithPretitle.primary.title
+   * - **API ID Path**: cta_block.ctaBlockWithPretitle.primary.title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   title: prismic.KeyTextField;
 
   /**
-   * Text field in *CtaBlock → Testimonial With Pretitle → Primary*
+   * Text field in *CtaBlock → CTA Block With Pretitle → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: cta_block.testimonialWithPretitle.primary.text
+   * - **API ID Path**: cta_block.ctaBlockWithPretitle.primary.text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
   text: prismic.RichTextField;
 
   /**
-   * CTA field in *CtaBlock → Testimonial With Pretitle → Primary*
+   * CTA field in *CtaBlock → CTA Block With Pretitle → Primary*
    *
    * - **Field Type**: Group
    * - **Placeholder**: *None*
-   * - **API ID Path**: cta_block.testimonialWithPretitle.primary.cta[]
+   * - **API ID Path**: cta_block.ctaBlockWithPretitle.primary.cta[]
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   cta: prismic.GroupField<
-    Simplify<CtaBlockSliceTestimonialWithPretitlePrimaryCtaItem>
+    Simplify<CtaBlockSliceCtaBlockWithPretitlePrimaryCtaItem>
   >;
 }
 
 /**
- * Testimonial With Pretitle variation for CtaBlock Slice
+ * CTA Block With Pretitle variation for CtaBlock Slice
  *
- * - **API ID**: `testimonialWithPretitle`
+ * - **API ID**: `ctaBlockWithPretitle`
  * - **Description**: Default
  * - **Documentation**: https://prismic.io/docs/slice
  */
-export type CtaBlockSliceTestimonialWithPretitle = prismic.SharedSliceVariation<
-  "testimonialWithPretitle",
-  Simplify<CtaBlockSliceTestimonialWithPretitlePrimary>,
+export type CtaBlockSliceCtaBlockWithPretitle = prismic.SharedSliceVariation<
+  "ctaBlockWithPretitle",
+  Simplify<CtaBlockSliceCtaBlockWithPretitlePrimary>,
   never
 >;
 
@@ -278,7 +278,7 @@ export type CtaBlockSliceTestimonialWithPretitle = prismic.SharedSliceVariation<
  */
 type CtaBlockSliceVariation =
   | CtaBlockSliceDefault
-  | CtaBlockSliceTestimonialWithPretitle;
+  | CtaBlockSliceCtaBlockWithPretitle;
 
 /**
  * CtaBlock Shared Slice
@@ -1093,24 +1093,34 @@ export type SplitImageTextSlice = prismic.SharedSlice<
  */
 export interface TestimonialsSliceDefaultPrimaryTestimonialItem {
   /**
-   * Testimonial Text field in *Testimonials → Default → Primary → Testimonial*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonial[].testimonial_text
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  testimonial_text: prismic.RichTextField;
-
-  /**
-   * Testimonial Author field in *Testimonials → Default → Primary → Testimonial*
+   * Title field in *Testimonials → Default → Primary → Testimonial*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonial[].testimonial_author
+   * - **API ID Path**: testimonials.default.primary.testimonial[].title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  testimonial_author: prismic.KeyTextField;
+  title: prismic.KeyTextField;
+
+  /**
+   * Text field in *Testimonials → Default → Primary → Testimonial*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonial[].text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+
+  /**
+   * Author field in *Testimonials → Default → Primary → Testimonial*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: testimonials.default.primary.testimonial[].author
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  author: prismic.KeyTextField;
 }
 
 /**
@@ -1118,24 +1128,24 @@ export interface TestimonialsSliceDefaultPrimaryTestimonialItem {
  */
 export interface TestimonialsSliceDefaultPrimary {
   /**
-   * Testimonials Title field in *Testimonials → Default → Primary*
+   * Title field in *Testimonials → Default → Primary*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonials_title
+   * - **API ID Path**: testimonials.default.primary.title
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  testimonials_title: prismic.KeyTextField;
+  title: prismic.KeyTextField;
 
   /**
-   * Testimonials Text field in *Testimonials → Default → Primary*
+   * Text field in *Testimonials → Default → Primary*
    *
    * - **Field Type**: Rich Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: testimonials.default.primary.testimonials_text
+   * - **API ID Path**: testimonials.default.primary.text
    * - **Documentation**: https://prismic.io/docs/field#rich-text-title
    */
-  testimonials_text: prismic.RichTextField;
+  text: prismic.RichTextField;
 
   /**
    * Testimonial field in *Testimonials → Default → Primary*
@@ -1197,11 +1207,11 @@ declare module "@prismicio/client" {
       CtaBlockSlice,
       CtaBlockSliceDefaultPrimaryCtaItem,
       CtaBlockSliceDefaultPrimary,
-      CtaBlockSliceTestimonialWithPretitlePrimaryCtaItem,
-      CtaBlockSliceTestimonialWithPretitlePrimary,
+      CtaBlockSliceCtaBlockWithPretitlePrimaryCtaItem,
+      CtaBlockSliceCtaBlockWithPretitlePrimary,
       CtaBlockSliceVariation,
       CtaBlockSliceDefault,
-      CtaBlockSliceTestimonialWithPretitle,
+      CtaBlockSliceCtaBlockWithPretitle,
       FullWidthCtaSlice,
       FullWidthCtaSliceDefaultPrimary,
       FullWidthCtaSliceWithPretitlePrimary,

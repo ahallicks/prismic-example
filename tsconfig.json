@@ -1,0 +1,47 @@
+{
+	"exclude": [
+		"./cypress",
+		"./cypress.config.ts",
+		"./build",
+		"./public/build",
+		"./node_modules"
+	],
+	"include": [
+		"env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"**/*.json",
+		"prismicio-types.d.ts"
+	],
+	"compilerOptions": {
+		"lib": ["DOM", "DOM.Iterable", "ES2022"],
+		"isolatedModules": true,
+		"esModuleInterop": true,
+		"jsx": "preserve",
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"target": "ES2022",
+		"resolveJsonModule": true,
+		"noUncheckedIndexedAccess": true,
+		"strict": true,
+		"allowJs": true,
+		"forceConsistentCasingInFileNames": true,
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["./app/*"],
+			"@/*": ["./*"]
+		},
+		"skipLibCheck": true,
+		"allowImportingTsExtensions": true,
+		"typeRoots": ["./types", "./node_modules/@types"],
+		// Remix takes care of building everything in `remix build`.
+		"noEmit": true,
+		"incremental": true,
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
+	}
+}

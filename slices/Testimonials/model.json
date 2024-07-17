@@ -12,20 +12,20 @@
       "description": "Default",
       "imageUrl": "",
       "primary": {
-        "testimonials_title": {
+        "title": {
           "type": "Text",
           "config": {
-            "label": "Testimonials Title",
+            "label": "Title",
             "placeholder": ""
           }
         },
-        "testimonials_text": {
+        "text": {
           "type": "StructuredText",
           "config": {
-            "label": "Testimonials Text",
+            "label": "Text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,strong,em"
           }
         },
         "testimonial": {
@@ -34,19 +34,26 @@
             "label": "Testimonial",
             "repeat": true,
             "fields": {
-              "testimonial_text": {
-                "type": "StructuredText",
-                "config": {
-                  "label": "Testimonial Text",
-                  "placeholder": "",
-                  "allowTargetBlank": true,
-                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-                }
-              },
-              "testimonial_author": {
+              "title": {
                 "type": "Text",
                 "config": {
-                  "label": "Testimonial Author",
+                  "label": "Title",
+                  "placeholder": ""
+                }
+              },
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Text",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,strong,em"
+                }
+              },
+              "author": {
+                "type": "Text",
+                "config": {
+                  "label": "Author",
                   "placeholder": ""
                 }
               }

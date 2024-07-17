@@ -22,6 +22,8 @@
     "@slicemachine/adapter-next": "^0.3.42",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
-    "slice-machine-ui": "^2.2.1"
+    "@types/react": "18.3.3",
+    "slice-machine-ui": "^2.2.1",
+    "typescript": "^5.5.3"
   }
 }

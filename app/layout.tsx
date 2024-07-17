@@ -12,7 +12,11 @@ const space_grotesk = Space_Grotesk({
 	variable: '--font-space-grotesk',
 });
 
-export default function RootLayout({ children }) {
+export default function RootLayout({
+	children,
+}: {
+	children: React.ReactNode;
+}) {
 	return (
 		<html lang="en">
 			<body className="bg-slate-900 font-inter tracking-tight text-slate-100 antialiased">

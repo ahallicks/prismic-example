@@ -10,24 +10,32 @@
 						"__TYPE__": "GroupItemContent",
 						"value": [
 							[
-								"testimonial_text",
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "zebra",
+									"type": "Text"
+								}
+							],
+							[
+								"text",
 								{
 									"__TYPE__": "StructuredTextContent",
 									"value": [
 										{
 											"type": "paragraph",
 											"content": {
-												"text": "Aliqua id irure non irure ullamco deserunt esse et elit eu. Aliquip dolore velit excepteur incididunt aliqua aute tempor dolore id irure fugiat veniam voluptate qui in. Ad est commodo aliqua consequat elit laborum cillum veniam Lorem."
+												"text": "Adipisicing labore id consectetur qui deserunt. Labore deserunt ipsum fugiat proident consequat do esse deserunt et ad nulla occaecat. Do excepteur ipsum nostrud incididunt enim consequat pariatur incididunt amet cillum consequat Lorem."
 											}
 										}
 									]
 								}
 							],
 							[
-								"testimonial_author",
+								"author",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "fellow",
+									"value": "son",
 									"type": "Text"
 								}
 							]
@@ -35,18 +43,18 @@
 					}
 				]
 			},
-			"testimonials_title": {
+			"title": {
 				"__TYPE__": "FieldContent",
-				"value": "reader",
+				"value": "alphabet",
 				"type": "Text"
 			},
-			"testimonials_text": {
+			"text": {
 				"__TYPE__": "StructuredTextContent",
 				"value": [
 					{
 						"type": "paragraph",
 						"content": {
-							"text": "Irure do laboris elit officia ad Lorem minim. Laborum qui ad ea pariatur qui."
+							"text": "Occaecat mollit tempor excepteur dolore amet esse esse. Excepteur consectetur nulla deserunt nulla eu excepteur. Pariatur excepteur veniam qui nostrud fugiat ea."
 						}
 					}
 				]

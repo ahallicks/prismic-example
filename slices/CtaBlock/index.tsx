@@ -1,11 +1,18 @@
+import type { Content } from '@prismicio/client';
+import type { SliceComponentProps } from '@prismicio/react';
+
+import { PrismicNextLink } from '@prismicio/next';
 import { PrismicRichText } from '@prismicio/react';
+
+export type CtaProps = SliceComponentProps<Content.CtaBlockSlice>;
 
 /**
  * @typedef {import("@prismicio/client").Content.CtaBlockSlice} CtaBlockSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<CtaBlockSlice>} CtaBlockProps
  * @param {CtaBlockProps}
  */
-const CtaBlock = ({ slice }) => {
+const CtaBlock = ({ slice }: CtaProps) => {
+	console.log(slice);
 	return (
 		<section
 			data-slice-type={slice.slice_type}
@@ -57,9 +64,7 @@ const CtaBlock = ({ slice }) => {
 					</div>
 					{/* Content */}
 					<div className="mx-auto max-w-3xl text-center">
-						{['testimonialWithPretitle'].includes(
-							slice.variation,
-						) ? (
+						{slice.variation === 'ctaBlockWithPretitle' ? (
 							<div className="inline-flex bg-gradient-to-r from-purple-500 to-purple-200 bg-clip-text pb-3 font-medium text-transparent">
 								{slice.primary.pretitle}
 							</div>
@@ -67,18 +72,25 @@ const CtaBlock = ({ slice }) => {
 						<h2 className="h2 bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 bg-clip-text pb-4 text-transparent">
 							{slice.primary.title}
 						</h2>
-						<p className="mb-8 text-lg text-slate-400">
-							{slice.primary.text}
-						</p>
+						<PrismicRichText
+							field={slice.primary.text}
+							components={{
+								paragraph: ({ children }) => (
+									<p className="mb-8 text-lg text-slate-400">
+										{children}
+									</p>
+								),
+							}}
+						/>
 						<ul className="grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2">
 							{slice.primary.cta.map((cta, index) => (
 								<li
 									key={`cta-block-item-${cta.cta_title}`}
 									className="relative h-full overflow-hidden rounded-3xl bg-slate-800 p-px before:pointer-events-none before:absolute before:-left-48 before:-top-48 before:z-30 before:h-96 before:w-96 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-purple-500 before:opacity-0 before:blur-[100px] before:transition-opacity before:duration-500 after:absolute after:inset-0 after:z-10 after:rounded-[inherit] after:opacity-0 after:transition-opacity after:duration-500 after:[background:_radial-gradient(250px_circle_at_var(--mouse-x)_var(--mouse-y),theme(colors.slate.400),transparent)] before:hover:opacity-20 after:group-hover:opacity-100 swiper-slide group/slide h-auto swiper-slide-active"
 								>
-									<article class="relative z-20 h-full overflow-hidden rounded-[inherit] bg-slate-900">
+									<article className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-slate-900">
 										<div
-											class="absolute inset-0 -z-10 opacity-0 transition-opacity duration-500 ease-in-out group-hover/slide:opacity-100 group-[.swiper-slide-active]/slide:opacity-100"
+											className="absolute inset-0 -z-10 opacity-0 transition-opacity duration-500 ease-in-out group-hover/slide:opacity-100 group-[.swiper-slide-active]/slide:opacity-100"
 											aria-hidden="true"
 											data-testid="particles-container"
 										>
@@ -92,20 +104,20 @@ const CtaBlock = ({ slice }) => {
 											></canvas>
 										</div>
 										<div
-											class="pointer-events-none absolute bottom-0 left-1/2 -z-10 aspect-square w-1/3 -translate-x-1/2 translate-y-1/2"
+											className="pointer-events-none absolute bottom-0 left-1/2 -z-10 aspect-square w-1/3 -translate-x-1/2 translate-y-1/2"
 											aria-hidden="true"
 										>
-											<div class="translate-z-0 absolute inset-0 rounded-full bg-slate-800 blur-[60px] transition-colors duration-500 ease-in-out group-[.swiper-slide-active]/slide:bg-purple-500"></div>
+											<div className="translate-z-0 absolute inset-0 rounded-full bg-slate-800 blur-[60px] transition-colors duration-500 ease-in-out group-[.swiper-slide-active]/slide:bg-purple-500"></div>
 										</div>
-										<div class="flex h-full flex-col p-6">
-											<div class="grow">
-												<h3 class="mb-3 text-lg font-bold">
+										<div className="flex h-full flex-col p-6">
+											<div className="grow">
+												<h3 className="mb-3 text-lg font-bold text-white">
 													{cta.cta_title}
 												</h3>
 												<PrismicRichText
 													field={cta.cta_text}
 													components={{
-														listitem: ({
+														listItem: ({
 															children,
 														}) => (
 															<li className="mb-3 text-slate-400">
@@ -122,16 +134,16 @@ const CtaBlock = ({ slice }) => {
 													}}
 												/>
 											</div>
-											<p class="text-right">
-												<a
-													class="group inline-flex items-center text-sm font-medium text-slate-300 transition duration-150 ease-in-out hover:text-white"
-													href={cta.cta_link.url}
+											<p className="text-right">
+												<PrismicNextLink
+													className="group inline-flex items-center text-sm font-medium text-slate-300 transition duration-150 ease-in-out hover:text-white"
+													field={cta.cta_link}
 												>
 													{cta.cta_link_text}
-													<span class="ml-1 tracking-normal text-purple-500 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5">
+													<span className="ml-1 tracking-normal text-purple-500 transition-transform duration-150 ease-in-out group-hover:translate-x-0.5">
 														-&gt;
 													</span>
-												</a>
+												</PrismicNextLink>
 											</p>
 										</div>
 									</article>

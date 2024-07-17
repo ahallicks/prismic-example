@@ -1,11 +1,16 @@
+import type { Content } from '@prismicio/client';
+import type { SliceComponentProps } from '@prismicio/react';
+
 import { PrismicRichText } from '@prismicio/react';
+
+export type FullWidthProps = SliceComponentProps<Content.FullWidthCtaSlice>;
 
 /**
  * @typedef {import("@prismicio/client").Content.FullWidthCtaSlice} FullWidthCtaSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<FullWidthCtaSlice>} FullWidthCtaProps
  * @param {FullWidthCtaProps}
  */
-const FullWidthCta = ({ slice }) => {
+const FullWidthCta = ({ slice }: FullWidthProps) => {
 	return (
 		<section
 			data-slice-type={slice.slice_type}
@@ -57,9 +62,8 @@ const FullWidthCta = ({ slice }) => {
 					</div>
 					{/* Content */}
 					<div className="mx-auto max-w-3xl text-center pb-6">
-						{['withPretitle', 'withPreAndPostTitle'].includes(
-							slice.variation,
-						) ? (
+						{slice.variation === 'withPretitle' ||
+						slice.variation === 'withPreAndPostTitle' ? (
 							<div className="inline-flex bg-gradient-to-r from-purple-500 to-purple-200 bg-clip-text pb-3 font-medium text-transparent">
 								{slice.primary.pretitle}
 							</div>
@@ -67,9 +71,8 @@ const FullWidthCta = ({ slice }) => {
 						<h2 className="h2 bg-gradient-to-r from-slate-200/60 via-slate-200 to-slate-200/60 bg-clip-text pb-3 text-transparent">
 							{slice.primary.title}
 						</h2>
-						{['postTitle', 'withPreAndPostTitle'].includes(
-							slice.variation,
-						) ? (
+						{slice.variation === 'postTitle' ||
+						slice.variation === 'withPreAndPostTitle' ? (
 							<h3 className=" h3 inline-flex bg-gradient-to-r from-purple-500 to-purple-200 bg-clip-text py-3 font-medium text-transparent">
 								{slice.primary.post_title}
 							</h3>

@@ -16,7 +16,7 @@ charset = utf-8
 indent_style = tab
 
 # Indentation override for all JS
-[{**/*.js,**/*.mjs,**/*.ts,**/*.tsx}]
+[{**/*.js,**/*.mjs,**/*.cjs,**/*.ts,**/*.tsx}]
 indent_style = tab
 indent_size = 4
 
