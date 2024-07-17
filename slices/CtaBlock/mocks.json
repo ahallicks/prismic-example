@@ -1,0 +1,152 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"cta": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"cta_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "slow",
+									"type": "Text"
+								}
+							],
+							[
+								"cta_text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Non velit qui ad id deserunt enim commodo officia voluptate ipsum sit irure. Tempor nulla cillum laboris do voluptate in sint minim."
+											}
+										}
+									]
+								}
+							],
+							[
+								"cta_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "https://slicemachine.dev"
+									}
+								}
+							],
+							[
+								"cta_link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "cent",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "rich",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "FieldContent",
+				"value": "low",
+				"type": "Text"
+			}
+		},
+		"items": []
+	},
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "testimonialWithPretitle",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "lunch",
+				"type": "Text"
+			},
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nisi deserunt id tempor ea reprehenderit deserunt ullamco aliqua ipsum sit laborum eu. Non eiusmod magna aliqua occaecat excepteur id cillum proident consectetur sit non."
+						}
+					}
+				]
+			},
+			"cta": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"cta_title",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "giant",
+									"type": "Text"
+								}
+							],
+							[
+								"cta_text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Deserunt anim ullamco enim irure dolor irure."
+											}
+										}
+									]
+								}
+							],
+							[
+								"cta_link",
+								{
+									"__TYPE__": "LinkContent",
+									"value": {
+										"__TYPE__": "ExternalLink",
+										"url": "http://twitter.com"
+									}
+								}
+							],
+							[
+								"cta_link_text",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "who",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"pretitle": {
+				"__TYPE__": "FieldContent",
+				"value": "edge",
+				"type": "Text"
+			}
+		},
+		"items": [
+			{
+				"__TYPE__": "GroupItemContent",
+				"value": []
+			}
+		]
+	}
+]

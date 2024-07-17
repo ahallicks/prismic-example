@@ -1,0 +1,6 @@
+{
+	"repositoryName": "delightful-crepe-qizg0g",
+	"adapter": "@slicemachine/adapter-next",
+	"libraries": ["./slices"],
+	"localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
+}

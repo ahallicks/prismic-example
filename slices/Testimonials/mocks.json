@@ -1,0 +1,57 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"testimonial": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"testimonial_text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Aliqua id irure non irure ullamco deserunt esse et elit eu. Aliquip dolore velit excepteur incididunt aliqua aute tempor dolore id irure fugiat veniam voluptate qui in. Ad est commodo aliqua consequat elit laborum cillum veniam Lorem."
+											}
+										}
+									]
+								}
+							],
+							[
+								"testimonial_author",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "fellow",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"testimonials_title": {
+				"__TYPE__": "FieldContent",
+				"value": "reader",
+				"type": "Text"
+			},
+			"testimonials_text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Irure do laboris elit officia ad Lorem minim. Laborum qui ad ea pariatur qui."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]
