@@ -37,7 +37,7 @@ const Testimonials = ({ slice }: TestimonialsProps) => {
 				{/* Carousel built with Swiper.js [https://swiperjs.com/] */}
 				{/* * Custom styles in src/css/additional-styles/theme.scss */}
 				<div className="relative before:absolute before:inset-0 before:z-20 before:-translate-x-full before:bg-gradient-to-l before:from-transparent before:to-slate-900 before:to-20% after:absolute after:inset-0 after:z-20 after:translate-x-full after:bg-gradient-to-r after:from-transparent after:to-slate-900 after:to-20%">
-					<div className="stellar-carousel swiper-container group">
+					<div className="stellar-carousel swiper-container group flex flex-col md:flex-row gap-4 md:gap-8">
 						{/* Carousel items */}
 						{slice.primary.testimonial.map((item, index) => (
 							<article className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-slate-900">

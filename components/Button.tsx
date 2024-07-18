@@ -1,6 +1,12 @@
+import { LinkField } from '@prismicio/client';
 import { PrismicNextLink } from '@prismicio/next';
 
-const Button = ({ link, children }) => {
+type TButton = {
+	link: LinkField;
+	children: React.ReactNode;
+};
+
+const Button = ({ link, children }: TButton) => {
 	return (
 		<PrismicNextLink
 			field={link}

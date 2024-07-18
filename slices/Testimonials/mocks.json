@@ -35,8 +35,45 @@
 								"author",
 								{
 									"__TYPE__": "FieldContent",
-									"value": "son",
-									"type": "Text"
+									"type": "Text",
+									"value": "Zara"
+								}
+							]
+						]
+					},
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"title",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Giraffe"
+								}
+							],
+							[
+								"text",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Adipisicing labore id consectetur qui deserunt. Labore deserunt ipsum fugiat proident consequat do esse deserunt et ad nulla occaecat. Do excepteur ipsum nostrud incididunt enim consequat pariatur incididunt amet cillum consequat Lorem.",
+												"spans": []
+											},
+											"direction": "ltr"
+										}
+									]
+								}
+							],
+							[
+								"author",
+								{
+									"__TYPE__": "FieldContent",
+									"type": "Text",
+									"value": "Freddy"
 								}
 							]
 						]
